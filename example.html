@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button data-page="page1">page1</button>
+    <button data-page="page2">page2</button>
+    <button data-page="page3">page3</button>
+    <button data-page="page4">page4</button>
+
+    <div id="page1"> <h1>div01 sdfssssd dsfsd dsfsd dsfsdf</h1></div>
+    <div id="page2"><h1>  div02 sdf sdfs sdfsdf</h1></div>
+    <div id="page3"><h1> div03 sadas asdasd asdfasd</h1></div>
+    <div id="page4"><h1> div04 asdfas asda asda asdas</h1></div>
+
+
+
+    <script>
+
+        fetch("")
+        document.querySelectorAll('button').forEach((button)=>{
+            button.onclick = function(){
+                showpage(this.dataset.page);
+
+            }
+        })
+
+        function showpage(page){
+            document.querySelectorAll('div').forEach((div)=>{
+                div.style.display = 'none'
+            })
+            document.querySelector(`#${page}`).style.display = 'block'
+
+        }
+
+
+
+    </script>
+    
+</body>
+</html>
